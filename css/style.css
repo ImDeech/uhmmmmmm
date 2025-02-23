@@ -1,0 +1,229 @@
+body {
+    background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#message-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 50px;
+    position: relative;
+}
+
+#messages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.message.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.gallery {
+    margin-top: 30px;
+    position: relative;
+}
+
+.gallery-img {
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.slideImg {
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+.main-photo {
+    width: 250px;
+    position: relative;
+    z-index: 2;
+}
+
+.rotated-left {
+    width: 200px;
+    top: 52px;
+    left: 82px;
+}
+
+.rotated-right {
+    width: 199px;
+    top: 40px;
+    right: 72px;
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    text-align: center;
+    margin-left: -80px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 200px auto;
+}
+
+.button {
+    background-color: #ff1493; /* Warna pink */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #c71585; /* Warna pink lebih gelap saat hover */
+}
+
+.hehe {
+    left: 300px;
+}
+
+/* Animasi untuk pop-up surat */
+.hidden { display: none; }
+.show { display: block; transform: translateY(-20px); transition: 0.5s ease-in-out; }
+
+
+
+/* Warna amplop berubah setelah diklik */
+.envelope.opened {
+    background-color: white !important; /* Ubah warna amplop jadi putih */
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Pastikan teks surat langsung muncul */
+.hidden {
+    display: none;
+}
+
+.card {
+    display: block;
+}
+
+.gif-cat {
+    width: 170px;
+    height: auto;
+    position: absolute;
+}
+
+.gif-dance {
+    width: 150px;
+    height: auto;
+    position: absolute;
+}
+
+.gif-capoo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+}
+
+#gif-1 {
+    top: 20px;
+    left: 20px;
+}
+
+#gif-2 {
+    top: 20px;
+    right: 20px;
+}
+
+#gif-3 {
+    bottom: 20px;
+    left: 350px;
+}
+
+#gif-4 {
+    bottom: 20px;
+    right: 350px;
+}
+
+#gif-5 {
+    top: 250px;
+    left: 380px;
+}
+
+#gif-6 {
+    top: 260px;
+    right: 380px;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.progress-container {
+    width: 70%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 25px;
+    transition: width 0.3s ease;
+}

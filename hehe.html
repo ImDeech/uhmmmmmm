@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hehe-</title>
+    <link rel="stylesheet" href="css/hehe.css" />
+    <link rel="icon" type="image/x-icon" href="images/DALL·E 2025-02-23 07.50.55 - A simple and cute minimalist logo featuring a cartoon character begging with teary eyes, about to cry. The character has a round face with a pleading .jpg">
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>Adek sayang mas nda?</b></div>
+    <button class="answerButton" onclick="location.href='YAY.html'">
+      IYA
+    </button>
+    <button class="answerButton" id="noButton">Nope-</button>
+    <br />
+    <img src="gif/Sad Cat Sticker by Capoo.gif" alt="cat sad" class="responsive" />
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="YAY.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
